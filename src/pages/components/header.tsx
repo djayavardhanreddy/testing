@@ -1,9 +1,9 @@
 /* eslint-disable react/no-children-prop */
 import Link from "next/link";
 import React, { useState } from "react";
-import { ModalComponent } from "./modal";
+import ModalComponent from "./modal";
 
-export const Header = ({ Children }: { Children: React.ReactNode }) => {
+const Header = ({ Children }: { Children: React.ReactNode }) => {
   const [nav, setNav] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -154,10 +154,12 @@ export const Header = ({ Children }: { Children: React.ReactNode }) => {
           <ModalComponent
             opened={active}
             children="dwefjnfhb"
-            setOpen={(value) => setActive(value as boolean)}
+            setOpen={(value: boolean) => setActive(value as boolean)}
           />
         )}
       </div>
     </div>
   );
 };
+
+export default Header;

@@ -6,7 +6,7 @@ interface IModalProps {
   children?: string;
 }
 
-export const ModalComponent = ({ opened, setOpen, children }: IModalProps) => {
+const ModalComponent = ({ opened, setOpen, children }: IModalProps) => {
   return (
     <div
       className="relative z-10"
@@ -80,3 +80,5 @@ export const ModalComponent = ({ opened, setOpen, children }: IModalProps) => {
     </div>
   );
 };
+
+export default ModalComponent;
